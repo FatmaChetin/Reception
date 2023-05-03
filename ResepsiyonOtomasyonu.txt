@@ -1,0 +1,10 @@
+Bu proje NTier mimariyle hazýrlanacaktýr. Katmanlarý; 
+project.ENTITIES, 
+project.MAP, 
+project.DAL, 
+project.BLL, 
+project.MVCUI,
+project.VM’ dir. 
+Proje küçük bir otelin resepsiyonistinin rezervasyon iþlemlerini yüz yüze veya telefonlar konuþarak yapacaðý  düþünülerek hazýrlanmýþ bir projedir. Minimum performans düþünülerek; çalýþan içerisinde housekeeper, garson, resepsiyonistin bulunduðu, 3 oda tipinden(standart, suit, king size) oluþan ufak bir oteldir. Odalarýn kullanýma açýlmasý temizlenip temizlenilmediðine baðlýdýr.  Rezervasyonu yapýlan Oda istenildiði takdirde yemek servis hizmeti de alabilmektedir. Rezervasyonu yaptýran kiþiyle kalan kiþi ayný olmak durumunda deðildir, rezervasyonu yaptýran kiþi dilerse birden fazla oda rezervasyonu yaptýrabilir. Ýstenildiði takdirde odalarda kalan misafirlerin bilgilerine ulaþýlabilecek bir sistemdir.
+
+Bu projede türkçe bir karakter kullanýlmamýþ olup tamamen ingilizce standartlarýna uygun olarak hazýrlanmýþtýr.
