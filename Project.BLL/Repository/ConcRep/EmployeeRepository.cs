@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Project.BLL.Repository.ConcRep
 {
-  public class EmployeeRepository<T>:BaseRepository<Employee>
+  public class EmployeeRepository:BaseRepository<Employee>
     {
     }
 }

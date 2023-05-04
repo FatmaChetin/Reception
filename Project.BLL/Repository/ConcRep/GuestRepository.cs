@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Project.BLL.Repository.ConcRep
 {
-    public class GuestRepository<T>:BaseRepository<Guest>
+    public class GuestRepository:BaseRepository<Guest>
     {
     }
 }
