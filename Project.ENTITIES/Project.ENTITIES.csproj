@@ -44,7 +44,6 @@
     <Compile Include="Enums\DataStatus.cs" />
     <Compile Include="Enums\EmployeeRole.cs" />
     <Compile Include="Enums\RoomStatus.cs" />
-    <Compile Include="Enums\RoomType.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -58,6 +57,7 @@
     <Compile Include="Models\RoomService.cs" />
     <Compile Include="Models\RoomServiceEmployee.cs" />
     <Compile Include="Models\RoomServiceDetail.cs" />
+    <Compile Include="Models\RoomType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

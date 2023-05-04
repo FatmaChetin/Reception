@@ -10,6 +10,8 @@ namespace Project.ENTITIES.Enums
     {
         Receptionist=1,
         Housekeeper=2,
-        Waiter=3
+        Waiter=3,
+        Admin=4
+        //todo enum a admin diye bir kullanıcı ekledik odalarda her hangi bir değişiklik veya ücretlerde herhangi bir değişiklik yapabilmesi için
     }
 }

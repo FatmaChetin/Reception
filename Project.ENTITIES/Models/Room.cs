@@ -11,13 +11,14 @@ namespace Project.ENTITIES.Models
     {
         public string RoomNo { get; set; }
         public RoomStatus RoomStatus { get; set; }
-        public RoomType RoomType { get; set; }
+        
 
         //relational properties
         public virtual List<RoomReservation> RoomReservations { get; set; }
         public virtual List<RoomEmployee> RoomEmployees { get; set; }
         public virtual List<GuestRoom> GuestRooms { get; set; }
         public virtual List<RoomServiceDetail> RoomServiceRooms { get; set; }
+        public virtual RoomType RoomType { get; set; }
 
     }
 }

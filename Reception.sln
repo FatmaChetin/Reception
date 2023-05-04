@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		ResepsiyonOtomasyonu.txt = ResepsiyonOtomasyonu.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.COMMON", "Project.COMMON\Project.COMMON.csproj", "{2CF7589E-3BAE-41E8-BD3F-A16C16D27653}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{01787916-5836-4942-92A0-FEC207F5EE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01787916-5836-4942-92A0-FEC207F5EE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01787916-5836-4942-92A0-FEC207F5EE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF7589E-3BAE-41E8-BD3F-A16C16D27653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF7589E-3BAE-41E8-BD3F-A16C16D27653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF7589E-3BAE-41E8-BD3F-A16C16D27653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF7589E-3BAE-41E8-BD3F-A16C16D27653}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
