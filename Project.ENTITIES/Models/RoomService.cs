@@ -11,6 +11,8 @@ namespace Project.ENTITIES.Models
 
         public string Menu { get; set; }
         public string Beverage { get; set; }
+        public decimal Price { get; set; }
+
         // relational properties
         public List<RoomServiceDetail> RoomServiceRooms { get; set; }
         public List<RoomServiceEmployee> RoomServiceEmployees { get; set; }

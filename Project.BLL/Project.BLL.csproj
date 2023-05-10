@@ -66,6 +66,7 @@
     <Compile Include="Repository\ConcRep\RoomServiceDetailRepository.cs" />
     <Compile Include="Repository\ConcRep\RoomServiceEmployeeRepository.cs" />
     <Compile Include="Repository\ConcRep\RoomServiceRepository.cs" />
+    <Compile Include="Repository\ConcRep\RoomTypeRepository.cs" />
     <Compile Include="Repository\IntRep\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>

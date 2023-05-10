@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
-{
-    public class RoomType:BaseEntity
-    {//todo oda tipi ayrı bir class olarak belirtildi ki özellikler eklenmek istenildiği zaman coplex bir yapıya rahatlıkla çevrilebilmesi için
-        public string TypeName { get; set; }
+{//todo:  roomtype classını sonradan oluşturduk. bu yüzden map, bll, dal katmanlarını roomtypela ilgili yapılması gereken herşeyi sırayla eklemelisin.
+       public class RoomType:BaseEntity
+    { 
+        public string TypeName { get; set; } 
         public decimal PricePerNight { get; set; }
         public string Description { get; set; }
 

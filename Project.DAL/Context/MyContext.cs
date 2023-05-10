@@ -1,4 +1,5 @@
-﻿using Project.ENTITIES.Models;
+﻿using Project.DAL.Init;
+using Project.ENTITIES.Models;
 using Project.MAP.Options;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,12 @@ using System.Threading.Tasks;
 
 namespace Project.DAL.Context
 {
+ // Init klasöründe kullandığımız MyInit classı bize database hazırlanırken gereken bilgileri program çalıştığı anlada sqle de eklemek için kullandık. daha sonra sqle elle veri girmemek için. bundan dolayı hazırladığımız MyInit classını MyContext classı ctor içerisinde yazmamız gerekiyor.setinitializer olarak unutma bundan dolayı böyle yaptık. MyContext classımız bize sql tablolarını oluşturur girdiğimiz bilgilerde bu tablolarla eklenecek bundan dolayı!!!!
     public class MyContext:DbContext
     {
         public MyContext():base("MyConnection")
         {
-            
+            Database.SetInitializer(new MyInit());
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -30,6 +32,7 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new RoomServiceMap());
             modelBuilder.Configurations.Add(new RoomServiceEmployeeMap());
             modelBuilder.Configurations.Add(new RoomServiceDetailMap());
+            modelBuilder.Configurations.Add(new RoomTypeMap());
         }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeProfile> EmployeeProfiles { get; set; }
@@ -43,6 +46,7 @@ namespace Project.DAL.Context
         public DbSet<RoomServiceEmployee> RoomServiceEmployees { get; set; }
         public DbSet<RoomServiceDetail> RoomServiceDetails { get; set; }
         public DbSet<Customer> Customers{ get; set; }
+        public DbSet<RoomType> RoomTypes { get; set;}
         
     }
 }

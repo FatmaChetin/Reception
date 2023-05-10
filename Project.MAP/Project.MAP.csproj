@@ -64,6 +64,7 @@
     <Compile Include="Options\RoomServiceEmployeeMap.cs" />
     <Compile Include="Options\RoomServiceMap.cs" />
     <Compile Include="Options\RoomServiceDetailMap.cs" />
+    <Compile Include="Options\RoomTypeMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
