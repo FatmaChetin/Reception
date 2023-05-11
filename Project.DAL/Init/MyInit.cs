@@ -89,7 +89,7 @@ namespace Project.DAL.Init
                 RoomService r = new RoomService();
                 r.Menu = new Commerce("tr").ProductName();
                 r.Beverage = new Commerce("tr").ProductName();
-                r.Price = Convert.ToInt32(new Commerce("tr").Price());
+                r.RoomServicePrice = Convert.ToInt32(new Commerce("tr").Price());
                 context.RoomServices.Add(r);
             }
             context.SaveChanges();
