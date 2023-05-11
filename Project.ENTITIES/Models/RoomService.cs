@@ -14,7 +14,7 @@ namespace Project.ENTITIES.Models
         public decimal RoomServicePrice { get; set; }
 
         // relational properties
-        public List<RoomServiceDetail> RoomServiceRooms { get; set; }
+        public List<RoomServiceDetail> RoomServiceDetails { get; set; }
         public List<RoomServiceEmployee> RoomServiceEmployees { get; set; }
     }
 }

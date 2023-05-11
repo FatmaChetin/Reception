@@ -9,5 +9,6 @@ namespace Project.MVCUI.Areas.Admin.Data
     public class AdminAddUpdateRoomPageVM
     {
         public AdminRoomVM Room { get; set; }
+        public List<AdminRoomTypeVM> RoomTypes { get; set; }
     }
 }
