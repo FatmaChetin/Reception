@@ -13,7 +13,7 @@ namespace Project.ENTITIES.Models
         public string ContactNumber { get; set; }
         public string TrId { get; set; }
         public string Email { get; set; }
-        public string RoomNumber { get; set; }
+        public string RoomNo { get; set; }
         public string Address { get; set; }
 
         //relational properties

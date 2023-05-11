@@ -60,7 +60,7 @@ namespace Project.DAL.Init
             for (int i = 101 ; i < 111; i++)
             {
                 Room room = new Room();
-                room.RoomType.ID = 1;
+                room.RoomType.ID = 1;//id üzerinden yakaladık ki daha sonra herhangi bir problem olmasın diye. literal değer girmek daha sonrasında değişiklik yaptığında adminin değerlerin değişmesini engeleyeceği için bu şekilde düzelttik.
                 context.Rooms.Add(room);
                 
             }
