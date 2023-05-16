@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -131,16 +137,22 @@
     <Compile Include="Areas\Admin\Controllers\RoomController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomTypeController.cs" />
-    <Compile Include="Areas\Admin\Data\AdminAddUpdateRoomServicePageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminAddUpdateRoomTypePageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminAddUpdateRoomPageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminRoomListPageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminRoomServiceListPageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminRoomTypeListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdateRoomPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdateRoomTypePageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomServiceListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomServicePageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomTypeListPageVM.cs" />
+    <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\EmployeeAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PageVM\ReservationPageVM.cs" />
+    <Compile Include="Models\PageVM\RoomPageVM.cs" />
+    <Compile Include="Models\PageVM\RoomServicePageVM.cs" />
+    <Compile Include="Models\PageVM\RoomTypePageVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +174,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -2018,10 +2031,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="OuterTools\assets\jquery-file-upload\server\php\files\thumbnail\" />
   </ItemGroup>
   <ItemGroup>

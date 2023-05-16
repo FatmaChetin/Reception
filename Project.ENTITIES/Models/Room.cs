@@ -13,6 +13,7 @@ namespace Project.ENTITIES.Models
         public string RoomNo { get; set; }
         public RoomStatus RoomStatus { get; set; }
         public int? RoomTypeID { get; set; }
+        public decimal RoomPricePerNight { get; set; }
 
 
 

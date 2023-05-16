@@ -1,7 +1,64 @@
-﻿
+﻿@model AdminAddUpdateRoomTypePageVM
+
 @{
     ViewBag.Title = "AddRoomType";
 }
 
 <h2>AddRoomType</h2>
+
+
+<style>
+    .genislik {
+        width: 300px;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-sm-12">
+
+            <section class="panel">
+                <header class="panel-heading">
+                    Oda Tipi Güncelleme Sayfası
+                </header>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-sm-2">Oda Tip İsmi</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.RoomType.TypeName, new { @class = "form-control-genislik" })
+                        </div>
+                    </div>
+
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Acıklama</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.RoomType.Description, new { @class = "form-control-genislik" })
+                        </div>
+                    </div>
+                    <br /> <br />
+
+                    <div class="form-group">
+                        <label class="col-sm-2">Oda Tipine Göre Fiyat Farkı</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.RoomType.PriceForType, new { @class = "form-control-genislik" })
+                        </div>
+                    </div>
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">İşlem:</label>
+                        <div class="col-sm-10">
+                            <button class="btn btn-primary">Ekle</button>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+}
+
 

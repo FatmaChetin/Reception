@@ -11,6 +11,7 @@ namespace Project.VM.PureVMs
         public int ID { get; set; }
         public string TypeName { get; set; }
         public string Description { get; set; }
+        public decimal PriceForType { get; set; }
 
 
 

@@ -1,7 +1,72 @@
-﻿
+﻿@model AdminAddUpdateRoomPageVM
 @{
     ViewBag.Title = "UpdateRoom";
 }
-
 <h2>UpdateRoom</h2>
+
+<style>
+    .genislik {
+        width: 300px;
+    }
+</style>
+
+@using (Html.BeginForm("UpdateRoom", "Room", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.HiddenFor(x => x.Room.ID)
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <section class="panel">
+                <header class="panel-heading">
+                    Oda Güncelleme Sayfası
+                </header>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-sm-2"> Oda Numarası</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Room.RoomNo, new { @class = "form-control-genislik" })
+                        </div>
+                    </div>
+
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Odanın Gecelik Ücreti</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Room.RoomPricePerNight, new { @class = "form-control-genislik" })
+                        </div>
+                    </div>
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Odanın Durumu</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(x => x.Room.RoomStatus, new { @class = "form-control-genislik" })
+                        </div>
+                    </div>
+                    <br /> <br />
+                    <div class="form-group">
+                        <label class="col-sm-2">Oda Tipi </label>
+                        <div class="col-sm-10">
+                            @Html.DropDownListFor(x => x.Room.RoomTypeID, new SelectList(Model.RoomTypes, "ID", "TypeName"), "Lütfen Seçiniz", new { @class = "form-control-genislik" })
+                        </div>
+                    </div>
+
+                    <br /> <br />
+
+                        <div class="form-group">
+                            <label class="col-sm-2">İşlem:</label>
+                            <div class="col-sm-10">
+                                <button class="btn btn-primary">Güncelle</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+        </div>
+    </div>
+
+}
 

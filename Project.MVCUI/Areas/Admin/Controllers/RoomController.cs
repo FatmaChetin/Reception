@@ -1,7 +1,7 @@
 ﻿using Microsoft.Ajax.Utilities;
 using Project.BLL.Repository.ConcRep;
 using Project.ENTITIES.Models;
-using Project.MVCUI.Areas.Admin.Data;
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs;
 using Project.VM.PureVMs;
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                 ID = x.ID,
                 TypeName = x.TypeName,
                 Description = x.Description,
-
+                
             }).ToList();
 
         }
@@ -39,6 +39,8 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                 RoomNo = x.RoomNo,
                 RoomStatus = Convert.ToString(x.RoomStatus),
                 RoomTypeID = x.RoomTypeID,
+                RoomPricePerNight=x.RoomPricePerNight,
+                RoomTypeName=x.RoomType.TypeName
 
             }).ToList();
         }
@@ -70,6 +72,8 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                 ID = room.ID,
                 RoomStatus = ENTITIES.Enums.RoomStatus.IsOn,
                 RoomTypeID = room.RoomTypeID,
+                RoomPricePerNight = room.RoomPricePerNight,
+                
 
             };
             _rRep.Add(r);
@@ -99,6 +103,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             toBeUpdated.RoomNo = room.RoomNo;
             toBeUpdated.RoomStatus = ENTITIES.Enums.RoomStatus.IsOn;
             toBeUpdated.RoomTypeID = room.RoomTypeID;
+            toBeUpdated.RoomPricePerNight= room.RoomPricePerNight;
             _rRep.Update(toBeUpdated);
             return RedirectToAction("ListRooms");
         }

@@ -1,7 +1,48 @@
-﻿@Model AdminRoomTypeListPageVM
+﻿@model AdminRoomTypeListPageVM
 @{
     ViewBag.Title = "ListRoomTypes";
 }
 
-<h2>ListRoomTypes</h2>
+<script src="~/Areas/Admin/AdminScripts/AdminRoomTypeDTJ.js"></script>
+
+<header class="panel-heading">
+    @Html.ActionLink("Oda Tipi Ekle", "AddRoomType", null, new { @class = "btn btn-primary" })
+</header>
+
+<div class="panel-body">
+    <div class="adv-table">
+        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+            <thead>
+                <tr>
+                    <th>Oda Tipi ID</th>
+                    <th>Oda Tipi İsmi</th>
+                    <th class="hidden-phone">Oda Tipi Açıklaması </th>
+                    <th class="hidden-phone">Oda Tipine Göre Fiyat Farkı</th>
+                    <th class="hidden-phone"> Sil</th>
+                    <th class="hidden-phone"> Güncelle</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AdminRoomTypeVM item in Model.RoomTypes)
+                {
+                   <tr class="grandeX">
+                       <td>@item.ID</td>
+                       <td>@item.TypeName</td>
+                       <td class=" hidden-phone">@item.Description</td>
+                       <td class="hidden-phone">@item.PriceForType</td>
+                       <td class="center hidden-phone">@Html.ActionLink("Sil","DeleteRoomType", new {id= item.ID },new {@class="btn btn-danger" })</td>
+                       <td class="center hidden-phone">@Html.ActionLink("Güncelle","UpdateRoomType", new {id=item.ID},new {@class="btn btn-warning" })</td>
+                   </tr>
+
+                }
+
+
+            </tbody>
+
+
+        </table>
+    </div>
+</div>
+
 

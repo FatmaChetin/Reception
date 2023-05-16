@@ -1,12 +1,11 @@
 ﻿using Project.BLL.Repository.ConcRep;
 using Project.ENTITIES.Models;
-using Project.MVCUI.Areas.Admin.Data;
+
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs;
 using Project.VM.PureVMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Project.MVCUI.Areas.Admin.Controllers
@@ -30,7 +29,8 @@ namespace Project.MVCUI.Areas.Admin.Controllers
 
                     ID = x.ID,
                     TypeName = x.TypeName,
-                    Description = x.Description
+                    Description = x.Description,
+                    PriceForType = x.PriceForType,
 
                 }).ToList();
             }
@@ -40,7 +40,8 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                 {
                     ID = x.ID,
                     TypeName = x.TypeName,
-                    Description = x.Description
+                    Description = x.Description,
+                    PriceForType = x.PriceForType,
                 }).ToList();
             }
             AdminRoomTypeListPageVM aR = new AdminRoomTypeListPageVM
@@ -62,6 +63,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             { 
             TypeName = item.TypeName,
             Description = item.Description,
+            PriceForType= item.PriceForType,
             ID= item.ID
             };
             _rTypeRep.Add(rT);
@@ -79,6 +81,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                     ID= selected.ID,
                     TypeName = selected.TypeName,
                     Description = selected.Description,
+                    PriceForType= selected.PriceForType,
                 }
 
             };
@@ -90,6 +93,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         RoomType toBeUpdated=_rTypeRep.Find(roomType.ID);
             toBeUpdated.TypeName = roomType.TypeName;
             toBeUpdated.Description = roomType.Description;
+            toBeUpdated.PriceForType = roomType.PriceForType;
             _rTypeRep.Update(toBeUpdated);
             return RedirectToAction("ListRoomTypes");
         
