@@ -1,0 +1,58 @@
+﻿@model AdminEmployeeProfileListPageVM
+@{
+    ViewBag.Title = "ListEmployeeProfiles";
+}
+
+<h2>ListEmployeeProfiles</h2>
+
+
+<header class="panel-heading">
+    @Html.ActionLink("Çalışan Bilgileri Ekle", "AddEmployeeProfile", null, new { @class = "btn btn-primary" })
+</header>
+
+<div class="panel-body">
+    <div class="adv-table">
+        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+            <thead>
+                <tr>
+                    <th>Çalışan ID</th>
+                    <th>Çalışan Ismi</th>
+                    <th>Çalışan Soyadı</th>
+                    <th>Çalışan Telefon Numarası</th>
+                    <th>Çalışanın Görevi</th>
+                    
+
+                    <th class="hidden-phone">Sil</th>
+                    <th class="hidden-phone">Güncelle</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (AdminEmployeeProfileVM item in Model.EmployeeProfiles)
+                {
+                    <tr class="gradeX">
+
+
+
+
+                        <td>@item.ID</td>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.ContactNumber</td>
+                        <td>@item.EmployeeVM.EmployeeRole</td>
+                        <td class="center hidden-phone"> @Html.ActionLink("Sil", "DeleteEmployeeProfile", new { id = item.ID }, new { @class = "btn btn-danger" })  </td>
+                        <td class="center hidden-phone">@Html.ActionLink("Güncelle", "UpdateEmployeeProfile", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
+
+                    </tr>
+                }
+
+
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<script src="~/Areas/Admin/AdminScripts/AdminEmployeeProfileDTJ.js"></script>

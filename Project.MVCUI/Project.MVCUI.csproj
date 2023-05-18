@@ -171,6 +171,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\AdminScripts\AdminEmployeeDTJ.js" />
+    <Content Include="Areas\Admin\AdminScripts\AdminEmployeeProfileDTJ.js" />
+    <Content Include="Areas\Admin\AdminScripts\AdminReservationDTJ.js" />
     <Content Include="Areas\Admin\AdminScripts\AdminRoomDTJ.js" />
     <Content Include="Areas\Admin\AdminScripts\AdminRoomServiceDTJ.js" />
     <Content Include="Areas\Admin\AdminScripts\AdminRoomTypeDTJ.js" />
@@ -2022,6 +2025,13 @@
     <Content Include="Areas\Admin\Views\Room\ListRooms.cshtml" />
     <Content Include="Areas\Admin\Views\RoomType\AddRoomType.cshtml" />
     <Content Include="Areas\Admin\Views\RoomType\UpdateRoomType.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\UpdateEmployee.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\AddEmployee.cshtml" />
+    <Content Include="Areas\Admin\Views\Employee\ListEmployees.cshtml" />
+    <Content Include="Areas\Admin\Views\EmployeeProfile\UpdateEmployeeProfile.cshtml" />
+    <Content Include="Areas\Admin\Views\EmployeeProfile\AddEmployeeProfile.cshtml" />
+    <Content Include="Areas\Admin\Views\EmployeeProfile\ListEmployeeProfiles.cshtml" />
+    <Content Include="Areas\Admin\Views\Reservation\ListReservations.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2051,9 +2061,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\EmployeeProfile\" />
-    <Folder Include="Areas\Admin\Views\Employee\" />
-    <Folder Include="Areas\Admin\Views\Reservation\" />
     <Folder Include="OuterTools\assets\jquery-file-upload\server\php\files\thumbnail\" />
   </ItemGroup>
   <ItemGroup>

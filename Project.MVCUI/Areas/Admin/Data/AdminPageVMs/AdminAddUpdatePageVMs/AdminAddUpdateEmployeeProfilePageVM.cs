@@ -9,6 +9,6 @@ namespace Project.MVCUI.Areas.Admin.Data.AdminPageVMs.AdminAddUpdatePageVms
     public class AdminAddUpdateEmployeeProfilePageVM
     {
         public AdminEmployeeProfileVM EmployeeProfile { get; set; }
-        public AdminEmployeeVM Employee { get; set; }
+        public List<AdminEmployeeVM> Employees { get; set; }
     }
 }

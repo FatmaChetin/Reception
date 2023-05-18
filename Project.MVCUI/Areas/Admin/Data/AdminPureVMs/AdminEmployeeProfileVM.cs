@@ -16,6 +16,7 @@ namespace Project.MVCUI.Areas.Admin.Data.AdminPureVMs
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
         public DateTime? DeletedDate { get; set; }
+        public AdminEmployeeVM EmployeeVM { get; set; }
 
     }
 }
