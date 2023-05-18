@@ -1,8 +1,8 @@
 ﻿using Project.BLL.Repository.ConcRep;
 using Project.ENTITIES.Models;
-using Project.MVCUI.Areas.Admin.Data;
-using Project.MVCUI.Areas.Admin.Data.AdminPageVMs;
-using Project.VM.PureVMs;
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs.AdminAddUpdatePageVms;
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs.AdminListPageVMs;
+using Project.MVCUI.Areas.Admin.Data.AdminPureVMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,7 +68,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         public ActionResult UpdateRoomService(int id)
         {
             RoomService selected = _rSerRep.Find(id);
-            AdminRoomServicePageVM ars= new AdminRoomServicePageVM
+            AdminAddUpdateRoomServicePageVM ars= new AdminAddUpdateRoomServicePageVM
            
             { 
                 RoomService=new AdminRoomServiceVM

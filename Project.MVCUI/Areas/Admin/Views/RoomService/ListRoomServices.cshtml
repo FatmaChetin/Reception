@@ -1,7 +1,55 @@
-﻿
+﻿@model AdminRoomServiceListPageVM
 @{
     ViewBag.Title = "ListRoomServices";
 }
 
 <h2>ListRoomServices</h2>
+
+<script src="~/Areas/Admin/AdminScripts/AdminRoomServiceDTJ.js"></script>
+
+<header class="panel-heading">
+    @Html.ActionLink("Oda Servisi Ekle", "AddRoomService", null, new { @class = "btn btn-primary" })
+</header>
+
+<div class="panel-body">
+    <div class="adv-table">
+        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+            <thead>
+                <tr>
+                    <th>Oda Servis ID</th>
+                    <th>Menu</th>
+                    <th class="hidden-phone">İçecek </th>
+                    <th class="hidden-phone"> Ücret </th>
+                    <th class="hidden-phone"> Oluşturma Tarihi</th>
+                    <th class="hidden-phone"> Silme Tarihi </th>
+                    <th class="hidden-phone"> Güncelleme Tarihi</th>
+                    <th class="hidden-phone"> Sil</th>
+                    <th class="hidden-phone"> Güncelle</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+               @foreach (AdminRoomServiceVM item in Model.RoomServices)
+               {
+                    <tr class="gradeX">
+                        <td>@item.ID</td>
+                        <td>@item.Menu</td>
+                        <td class="hidden-phone">@item.Beverage</td>
+                        <td class="center hidden-phone">@item.Price</td>
+                        <td class="center hidden-phone">@item.CreatedDate</td>
+                        <td class="center hidden-phone">@item.DeletedDate</td>
+                        <td class="center hidden-phone">@item.UpdatedDate</td>
+                        <td class="center hidden-phone">@Html.ActionLink("Sil", "DeleteCategory", new { id = item.ID }, new { @class = "btn btn-danger" })</td>
+                        <td class="center hidden-phone">@Html.ActionLink("Güncelle", "UpdateCategory", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
+                    </tr>
+                }
+
+            </tbody>
+
+
+        </table>
+    </div>
+</div>
+
 

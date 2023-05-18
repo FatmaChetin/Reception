@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.VM.PureVMs
+namespace Project.MVCUI.Areas.Admin.Data.AdminPureVMs
 {
     public class AdminRoomServiceVM
     {
@@ -12,6 +12,8 @@ namespace Project.VM.PureVMs
         public string Menu { get; set; }
         public string Beverage { get; set; }
         public decimal Price { get; set; }
-
+        public DateTime CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public DateTime? DeletedDate { get; set; }
     }
 }

@@ -16,5 +16,6 @@ namespace Project.VM.PureVMs
         public string RoomNo { get; set; }
         public string Address { get; set; }
         public int? RoomID { get; set; }
+        public List<RoomVM> Rooms { get; set; }
     }
 }

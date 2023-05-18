@@ -1,8 +1,8 @@
 ﻿using Project.BLL.Repository.ConcRep;
 using Project.ENTITIES.Models;
-
-using Project.MVCUI.Areas.Admin.Data.AdminPageVMs;
-using Project.VM.PureVMs;
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs.AdminAddUpdatePageVms;
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs.AdminListPageVMs;
+using Project.MVCUI.Areas.Admin.Data.AdminPureVMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +31,9 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                     TypeName = x.TypeName,
                     Description = x.Description,
                     PriceForType = x.PriceForType,
+                    DeletedDate=x.DeletedDate,
+                    CreatedDate=x.CreatedDate,
+                    UpdatedDate=x.UpdatedDate
 
                 }).ToList();
             }
@@ -42,6 +45,9 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                     TypeName = x.TypeName,
                     Description = x.Description,
                     PriceForType = x.PriceForType,
+                    DeletedDate = x.DeletedDate,
+                    CreatedDate = x.CreatedDate,
+                    UpdatedDate = x.UpdatedDate
                 }).ToList();
             }
             AdminRoomTypeListPageVM aR = new AdminRoomTypeListPageVM
@@ -82,6 +88,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                     TypeName = selected.TypeName,
                     Description = selected.Description,
                     PriceForType= selected.PriceForType,
+                   
                 }
 
             };
@@ -94,6 +101,8 @@ namespace Project.MVCUI.Areas.Admin.Controllers
             toBeUpdated.TypeName = roomType.TypeName;
             toBeUpdated.Description = roomType.Description;
             toBeUpdated.PriceForType = roomType.PriceForType;
+           
+            
             _rTypeRep.Update(toBeUpdated);
             return RedirectToAction("ListRoomTypes");
         

@@ -16,5 +16,6 @@ namespace Project.VM.PureVMs
         public string RoomNo { get; set; }
         public string Address { get; set; }
         public decimal TotalPrice { get; set; }
+        public List<ReservationVM> Reservations { get; set; }
     }
 }

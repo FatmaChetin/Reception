@@ -42,13 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PureVMs\AdminRoomServiceVM.cs" />
-    <Compile Include="PureVMs\AdminRoomTypeVM.cs" />
-    <Compile Include="PureVMs\AdminRoomVM.cs" />
     <Compile Include="PureVMs\CustomerVM.cs" />
     <Compile Include="PureVMs\EmployeeProfileVM.cs" />
     <Compile Include="PureVMs\EmployeeVM.cs" />
-    <Compile Include="PureVMs\GuestRoomVM.cs" />
     <Compile Include="PureVMs\GuestVM.cs" />
     <Compile Include="PureVMs\ReservationVM.cs" />
     <Compile Include="PureVMs\RoomServiceVM.cs" />

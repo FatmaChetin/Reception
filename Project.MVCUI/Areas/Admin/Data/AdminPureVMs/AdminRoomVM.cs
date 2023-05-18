@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.VM.PureVMs
+namespace Project.MVCUI.Areas.Admin.Data.AdminPureVMs
 {
     public class AdminRoomVM
     {
         public int ID { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public DateTime? DeletedDate { get; set; }
         public string RoomNo { get; set; }
         public string RoomStatus { get; set; }
         public int? RoomTypeID { get; set; }

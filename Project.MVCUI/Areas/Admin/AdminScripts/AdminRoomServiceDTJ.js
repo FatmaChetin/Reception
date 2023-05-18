@@ -1,10 +1,8 @@
 ﻿/* Formating function for row details */
-
 function fnFormatDetails(oTable, nTr) {
     var aData = oTable.fnGetData(nTr);
     var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
-    sOut += '<tr><td>Odanın Oda tipi bilgisi:</td><td> <a title="Icerik" href="/Admin/Room/ListRooms/' + aData[1] + '">  ' + aData[2] + ' odaları   </a> </td></tr>';
-    sOut += '<tr><td>Oda Tipi Detayı:</td><td>  <a title="Detay" href="/Admin/RoomType/ListRoomTypes/' + aData[1] + '"> ' + aData[2] + ' </a>    </td></tr>';
+    
 
     sOut += '</table>';
 
@@ -17,7 +15,7 @@ $(document).ready(function () {
      */
     var nCloneTh = document.createElement('th');
     var nCloneTd = document.createElement('td');
-    nCloneTd.innerHTML = '<img src="/OuterTools/assets/advanced-datatable/examples/examples_support/details_open.png">';
+    nCloneTd.innerHTML = '<img class="opcl" src="/OuterTools/assets/advanced-datatable/examples/examples_support/details_open.png">';
     nCloneTd.className = "center";
 
     $('#hidden-table-info thead tr').each(function () {
@@ -42,7 +40,7 @@ $(document).ready(function () {
      * Note that the indicator for showing which row is open is not controlled by DataTables,
      * rather it is done here
      */
-    $('#hidden-table-info tbody td img').live('click', function () {
+    $('#hidden-table-info tbody td .opcl').live('click', function () {
         var nTr = $(this).parents('tr')[0];
         if (oTable.fnIsOpen(nTr)) {
             /* This row is already open - close it */

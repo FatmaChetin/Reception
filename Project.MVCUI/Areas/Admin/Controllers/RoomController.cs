@@ -1,8 +1,10 @@
 ﻿using Microsoft.Ajax.Utilities;
 using Project.BLL.Repository.ConcRep;
+using Project.ENTITIES.Enums;
 using Project.ENTITIES.Models;
-using Project.MVCUI.Areas.Admin.Data.AdminPageVMs;
-using Project.VM.PureVMs;
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs.AdminAddUpdatePageVms;
+using Project.MVCUI.Areas.Admin.Data.AdminPageVMs.AdminListPageVMs;
+using Project.MVCUI.Areas.Admin.Data.AdminPureVMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +29,10 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                 ID = x.ID,
                 TypeName = x.TypeName,
                 Description = x.Description,
-                
+                DeletedDate = x.DeletedDate,
+                CreatedDate = x.CreatedDate,
+                UpdatedDate = x.UpdatedDate
+
             }).ToList();
 
         }
@@ -40,7 +45,10 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                 RoomStatus = Convert.ToString(x.RoomStatus),
                 RoomTypeID = x.RoomTypeID,
                 RoomPricePerNight=x.RoomPricePerNight,
-                RoomTypeName=x.RoomType.TypeName
+                RoomTypeName=x.RoomType.TypeName,
+                DeletedDate = x.DeletedDate,
+                CreatedDate = x.CreatedDate,
+                UpdatedDate = x.UpdatedDate
 
             }).ToList();
         }
@@ -74,7 +82,6 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                 RoomTypeID = room.RoomTypeID,
                 RoomPricePerNight = room.RoomPricePerNight,
                 
-
             };
             _rRep.Add(r);
             return RedirectToAction("ListRooms");
@@ -90,7 +97,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
                   ID=x.ID,
                   RoomTypeID=x.RoomTypeID,
                   RoomNo=x.RoomNo,
-
+                  
               }).FirstOrDefault()
             };
             return View(art);
@@ -99,6 +106,7 @@ namespace Project.MVCUI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult UpdateRoom(AdminRoomVM room)
         {
+          
             Room toBeUpdated = _rRep.Find(room.ID);
             toBeUpdated.RoomNo = room.RoomNo;
             toBeUpdated.RoomStatus = ENTITIES.Enums.RoomStatus.IsOn;

@@ -15,5 +15,7 @@ namespace Project.VM.PureVMs
         public decimal RoomServicePrice { get; set; }
         public int? CustomerID { get; set; }
         public int? EmployeeID { get; set; }
+        public List<RoomServiceVM> RoomServices { get; set; }
+        public List<RoomVM> Rooms { get; set; }
     }
 }

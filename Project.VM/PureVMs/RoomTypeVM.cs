@@ -11,5 +11,6 @@ namespace Project.VM.PureVMs
         public string TypeName { get; set; }
         public decimal PricePerNight { get; set; }
         public string Description { get; set; }
+        public List<RoomVM> Rooms { get; set; }
     }
 }

@@ -18,6 +18,9 @@
                     <th>Oda Tipi İsmi</th>
                     <th class="hidden-phone">Oda Tipi Açıklaması </th>
                     <th class="hidden-phone">Oda Tipine Göre Fiyat Farkı</th>
+                    <th class="hidden-phone"> Oluşturma Tarihi</th>
+                    <th class="hidden-phone"> Silme Tarihi </th>
+                    <th class="hidden-phone"> Güncelleme Tarihi</th>
                     <th class="hidden-phone"> Sil</th>
                     <th class="hidden-phone"> Güncelle</th>
 
@@ -31,8 +34,11 @@
                        <td>@item.TypeName</td>
                        <td class=" hidden-phone">@item.Description</td>
                        <td class="hidden-phone">@item.PriceForType</td>
-                       <td class="center hidden-phone">@Html.ActionLink("Sil","DeleteRoomType", new {id= item.ID },new {@class="btn btn-danger" })</td>
-                       <td class="center hidden-phone">@Html.ActionLink("Güncelle","UpdateRoomType", new {id=item.ID},new {@class="btn btn-warning" })</td>
+                       <td class="center hidden-phone">@item.CreatedDate</td>
+                       <td class="center hidden-phone">@item.DeletedDate</td>
+                       <td class="center hidden-phone">@item.UpdatedDate</td>
+                       <td class="center hidden-phone">@Html.ActionLink("Sil", "DeleteRoomType", new { id = item.ID }, new { @class = "btn btn-danger" })</td>
+                       <td class="center hidden-phone">@Html.ActionLink("Güncelle", "UpdateRoomType", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
                    </tr>
 
                 }

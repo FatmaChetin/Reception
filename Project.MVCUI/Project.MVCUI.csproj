@@ -134,15 +134,30 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EmployeeProfileController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ReservationController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomServiceController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomTypeController.cs" />
-    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdateRoomPageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdateRoomTypePageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomListPageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomServiceListPageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomServicePageVM.cs" />
-    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminRoomTypeListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdatePageVMs\AdminAddUpdateEmployeePageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdatePageVMs\AdminAddUpdateRoomPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdatePageVMs\AdminAddUpdateRoomTypePageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminListPageVMs\AdminEmployeeListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdatePageVMs\AdminAddUpdateEmployeeProfilePageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminListPageVMs\AdminEmployeeProfileListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdatePageVMs\AdminAddUpdateReservationPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminListPageVMs\AdminReservationListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminListPageVMs\AdminRoomListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminListPageVMs\AdminRoomServiceListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminAddUpdatePageVMs\AdminAddUpdateRoomServicePageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPageVMs\AdminListPageVMs\AdminRoomTypeListPageVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPureVMs\AdminEmployeeProfileVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPureVMs\AdminEmployeeVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPureVMs\AdminReservationVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPureVMs\AdminRoomServiceVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPureVMs\AdminRoomTypeVM.cs" />
+    <Compile Include="Areas\Admin\Data\AdminPureVMs\AdminRoomVM.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\EmployeeAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -157,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\AdminScripts\AdminRoomDTJ.js" />
+    <Content Include="Areas\Admin\AdminScripts\AdminRoomServiceDTJ.js" />
     <Content Include="Areas\Admin\AdminScripts\AdminRoomTypeDTJ.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -2035,6 +2051,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\EmployeeProfile\" />
+    <Folder Include="Areas\Admin\Views\Employee\" />
+    <Folder Include="Areas\Admin\Views\Reservation\" />
     <Folder Include="OuterTools\assets\jquery-file-upload\server\php\files\thumbnail\" />
   </ItemGroup>
   <ItemGroup>

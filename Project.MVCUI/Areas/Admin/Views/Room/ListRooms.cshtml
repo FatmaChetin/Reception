@@ -18,7 +18,9 @@
                     <th class="hidden-phone">Odanın Gecelik Fiyatı</th>
                     <th class="hidden-phone">Odanın Durumu</th>
                     <th class="hidden-phone">Odanın Tipi</th>
-                   
+                    <th class="hidden-phone"> Oluşturma Tarihi</th>
+                    <th class="hidden-phone"> Silme Tarihi </th>
+                    <th class="hidden-phone"> Güncelleme Tarihi</th>
                     <th class="hidden-phone">Sil</th>
                     <th class="hidden-phone">Güncelle</th>
                 </tr>
@@ -34,19 +36,22 @@
                         <td class="center hidden-phone">@item.RoomStatus</td>
                         <td class="hidden-phone">@item.RoomTypeID</td>
                         <td class="center hidden-phone">
-                            @if (item.RoomTypeName==null)
+                            @if (item.RoomTypeName == null)
                             {
-                              <td>Oda Tipi Belirtilmemiş </td>
-                            }
-                            else
-                            {
-                                <td class="center hidden-phone">@item.RoomTypeName</td>
-                            }
+                            <td>Oda Tipi Belirtilmemiş </td>
+                        }
+                        else
+                        {
+                            <td class="center hidden-phone">@item.RoomTypeName</td>
+                        }
+                            <td class="center hidden-phone">@item.CreatedDate</td>
+                            <td class="center hidden-phone">@item.DeletedDate</td>
+                            <td class="center hidden-phone">@item.UpdatedDate</td>
 
-                  <td class="center hidden-phone"> @Html.ActionLink("Sil", "DeleteRoom", new { id = item.ID }, new { @class = "btn btn-danger" })  </td>
-                        <td class="center hidden-phone">@Html.ActionLink("Güncelle", "UpdateRoom", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
+                            <td class="center hidden-phone"> @Html.ActionLink("Sil", "DeleteRoom", new { id = item.ID }, new { @class = "btn btn-danger" })  </td>
+                            <td class="center hidden-phone">@Html.ActionLink("Güncelle", "UpdateRoom", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
 
-                    </tr>
+                        </tr>
                 }
 
 

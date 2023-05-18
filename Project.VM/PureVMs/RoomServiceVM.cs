@@ -11,6 +11,9 @@ namespace Project.VM.PureVMs
         public string Menu { get; set; }
         public string Beverage { get; set; }
         public decimal RoomServicePrice { get; set; }
-        public int? RoomID { get; set; }
+        public List<ReservationVM> Reservations { get; set; }
+        public List<RoomVM> Rooms { get; set; }
+        public List<EmployeeVM> Employees { get; set; }
+
     }
 }

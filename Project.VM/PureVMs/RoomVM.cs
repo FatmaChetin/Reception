@@ -12,5 +12,8 @@ namespace Project.VM.PureVMs
         public string RoomNo { get; set; }
         public string RoomStatus { get; set; }
         public int? RoomTypeID { get; set; }
+        public List<ReservationVM> Reservations { get; set; }
+        public List<RoomServiceVM> RoomServices { get; set; }
+        public List<EmployeeVM> Employees { get; set; }
     }
 }
